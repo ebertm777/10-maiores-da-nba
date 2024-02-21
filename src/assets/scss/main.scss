@@ -1,0 +1,177 @@
+@import './settings/*';
+@import './../components/**/*.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1260px;
+  text-align: center;
+}
+
+$fontUrlPrefix: 'https://deoliyp60f2gq.cloudfront.net';
+
+@font-face {
+  font-family: 'WhitmanDisplayCond-ExtBold';
+  src: url($fontUrlPrefix+'/fonts/Whitman/WhitmanDisplayCond-ExtBold.otf')
+    format('opentype');
+}
+
+.content-header {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 950px) {
+    flex-direction: column-reverse;
+
+    .header-image-dir {
+      margin-top: 40px;
+    }
+
+    .header-image-esq {
+      display: none;
+    }
+  }
+}
+
+.pre-title {
+  color: #B4BDCD;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 50px;
+
+  @media (max-width: 950px) {
+    margin-top: 20px;
+  }
+}
+
+.main-title {
+  color: #8B919D;
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  letter-spacing: 1.3px;
+  font-weight: 200;
+
+  @media (max-width: 640px) {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .subtitle-highlight,
+  .subtitle-super-highlight {
+    font-weight: bold;
+  }
+
+  .subtitle-highlight {
+    color: #FC601C;
+    display: block;
+  }
+
+  .subtitle-super-highlight {
+    background: #FC601C;
+    color: white;
+    display: inline-block;
+    padding: 0 4px;
+  }
+}
+
+.main-subtitle {
+  color: #8B919D;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 550px;
+  margin: 30px auto;
+
+  a {
+    color: #FC601C;
+  }
+}
+
+.bottom-line-detail {
+  border-bottom: 1px solid #FC601C;
+  margin: 0 auto;
+  width: 200px;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(45deg);
+    left: 50%;
+    top: 1px;
+    width: 10px;
+    height: 10px;
+    border-bottom: 1px solid #FC601C;
+    border-right: 1px solid #FC601C;
+    background: #fff;
+  }
+}
+
+.to-share {
+  background: grey;
+  position: relative;
+  height: 315px;
+  margin: 0 auto;
+  width: 600px;
+}
+
+.loading {
+  height: 0;
+  width: 0;
+  padding: 15px;
+  border: 6px solid #ccc;
+  border-right-color: #888;
+  border-radius: 22px;
+  animation: rotate 1s infinite linear;
+  position: absolute;
+  left: calc(50% - 20px);
+  top: 50%;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.head-materia {
+  display: none;
+}
+
+.custom-head-line {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

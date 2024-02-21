@@ -1,0 +1,74 @@
+.section-credits {
+    color: $text-color-credits;
+  }
+  
+  .credits-container {
+    text-align: center;
+    max-width: 490px;
+    margin: 150px auto 110px;
+  
+    .credits-main-title {
+      display: inline-block;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: $font-weight-extra-bold;
+      border-bottom: 1px solid $divider-light-grey;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      letter-spacing: 2px;
+      width: 100%;
+      font-size: 16px;
+      color: #414142;
+    }
+  
+    .role,
+    .names,
+    .name {
+      display: inline-block;
+      line-height: 13px;
+      margin-bottom: 10px;
+      vertical-align: text-top;
+      font-size: 15px;
+    }
+  
+    .role {
+      font-style: italic;
+      padding-right: 12px;
+      text-align: right;
+      width: 220px;
+      color: #414142;
+    }
+  
+    .names {
+      width: 260px;
+      text-align: left;
+      font-size: 0.875em;
+  
+      .name {
+        display: block;
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .role,
+      .names,
+      .name {
+        display: block;
+      }
+  
+      .role {
+        padding-right: 0;
+      }
+  
+      .role,
+      .names {
+        width: 100%;
+        text-align: center;
+      }
+  
+      .names {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  

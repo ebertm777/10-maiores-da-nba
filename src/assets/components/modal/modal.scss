@@ -1,0 +1,195 @@
+.noscroll {
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+    .components-container {
+      z-index: 10;
+    }
+  }
+}
+
+.close-bt {
+  background: $main-color;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 16;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  top: -20px;
+  right: -20px;
+  text-align: center;
+  line-height: 40px;
+  opacity: 1;
+  transition: opacity 0.3s;
+  box-shadow: 1px 1.7px 3px 0 rgba(4, 0, 0, 0.3);
+  font-size: 32px;
+
+  .close-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media (max-width: 400px) {
+    right: -2px;
+  }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+  display: none;
+  z-index: 9999999;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+
+  .modal-dialog {
+    position: relative;
+    min-height: calc(100% - (1.75rem * 2));
+    margin: 30px auto;
+    max-width: 470px;
+    width: calc(100% - 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal-content {
+      border-radius: 3px;
+      min-width: 280px;
+      background-color: white;
+      box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.35);
+      padding: 20px 0;
+      position: relative;
+    }
+  }
+
+  .modal-inner-content {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+
+    @media (max-width: 400px) {
+      padding: 0 5px;
+    }
+
+    .tabulator-cell {
+      width: 100% !important;
+      height: auto !important;
+      font-size: 13px;
+
+      .data-cell-profile {
+        padding: 0;
+        justify-content: center;
+      }
+    }
+
+    .modal-content-block {
+      border-bottom: 1px solid #d8d8d8;
+      margin-bottom: 0;
+      padding: 15px 0;
+
+      .bt-veja-mais-container {
+        display: none;
+      }
+
+      .data-cell-voting {
+        padding: 0;
+      }
+
+      .tabulator-cell {
+        display: block !important;
+      }
+
+      .data-cell-profile-image {
+        display: block;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .modal-content-title {
+        letter-spacing: 1px;
+        font-weight: bold;
+        text-align: center;
+        font-size: 11px;
+        text-transform: uppercase;
+        margin: 0 0 10px 0;
+      }
+
+      .tabulator-cell {
+        font-size: 13px;
+        text-align: center;
+      }
+
+      .data-cell-profile-name {
+        margin: 0;
+        font-size: 13px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .data-cell-voting-name {
+        text-align: center;
+        margin-top: 0;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .modal-dialog {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .modal-dialog {
+      width: calc(100% - 10px);
+    }
+  }
+}
+
+.noscroll .modal {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.popup-email-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.default-input-text.input-discovered-email {
+  margin-bottom: 0;
+  width: auto;
+}
+
+.label-discovered-email {
+  margin-right: 10px;
+}
+
+.email-footer-disclaimer,
+.label-discovered-email {
+  font-size: 13px;
+}
+
+.email-footer-disclaimer .mail {
+  color: $main-color;
+}
+
+.modal-title {
+  text-align: center;
+  margin-bottom: 20px;
+}

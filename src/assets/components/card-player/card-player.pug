@@ -1,0 +1,9 @@
+mixin cardPlayer(config)
+  .card-player
+    .card-player__profile
+      .card-player__image-container
+        img.card-player__image(src=require('./assets/images/' + config.image))
+      .card-player__text-details
+        .card-player__name= config.name
+        .card-player__position= config.position
+    .card-player__checkbox

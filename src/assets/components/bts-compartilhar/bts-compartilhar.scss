@@ -1,0 +1,25 @@
+.g-compartilhar-container {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .g-compartilhar {
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    img {
+      margin-right: 10px;
+      width: 34px;
+    }
+  }
+
+  @media (max-width: 950px) {
+    margin-top: 0;
+  }
+}

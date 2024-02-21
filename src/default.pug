@@ -1,0 +1,31 @@
+if !htmlWebpackPlugin.options.isProd
+  doctype html
+
+if htmlWebpackPlugin.options.isProd
+  |{% extends "redesenho/pagina.html" %}
+  |{% block include_head_template %}
+
+meta(charset='UTF-8')
+meta(name='viewport', content='width=device-width, initial-scale=1.0')
+meta(http-equiv='X-UA-Compatible', content='ie=edge')
+meta(property="og:image", content="http://deoliyp60f2gq.cloudfront.net/10-maiores-da-nba/facebook.jpg")
+meta(property="og:image:secure_url", content="https://deoliyp60f2gq.cloudfront.net/10-maiores-da-nba/facebook.jpg")
+meta(property="og:image:type", content="image/jpeg")
+meta(property="og:image:width", content="600")
+meta(property="og:image:height", content="315")
+meta(property="og:image:alt", content="base")
+meta(property="og:description", content="")
+meta(property="fb:app_id", content="275998675912771")
+
+title Base
+
+if htmlWebpackPlugin.options.isProd
+  |{% endblock include_head_template %}
+  |{% block mainContent %}
+
+body
+  block content
+  script(src="https://www.google.com/recaptcha/api.js?hl=pt-BR")
+
+if htmlWebpackPlugin.options.isProd
+  |{% endblock %}

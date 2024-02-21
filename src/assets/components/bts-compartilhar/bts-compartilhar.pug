@@ -1,0 +1,13 @@
+- var urlInfo = 'https://infograficos.oglobo.globo.com/esportes/10-maiores-da-nba.html';
+- var hashtags = [ 'OGlobo', 'JornalOGlobo']
+- var onClick = "javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;";
+
+.g-compartilhar-container
+  a.g-compartilhar.g-compartilhar-fb.generic-share-fb
+    include ico-fb.pug
+
+  a.g-compartilhar(href=`https://twitter.com/intent/tweet?hashtags=${hashtags.join(',')}&text=${urlInfo}`, data-size="large", target="_blank" onClick=onClick)
+    include ico-twitter.pug
+
+  a.g-compartilhar(href=`https://api.whatsapp.com/send?text=${urlInfo}`, target="_blank", data-action="share/whatsapp/share" onClick=onClick)
+    include ico-wp.pug

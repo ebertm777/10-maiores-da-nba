@@ -1,0 +1,37 @@
+extends default
+include ./assets/components/card-player/card-player
+
+block content
+  .container
+    .content-header
+      .header-image.header-image-esq
+        img(src=require("./assets/images/topo-esq.jpg"), alt="Basquete")
+      .custom-head-line
+        p.pre-title Enquete:
+        h1.main-title
+          | Os 10 maiores
+          span.subtitle-highlight  jogadores da&nbsp;
+            span.subtitle-super-highlight NBA
+
+        .bottom-line-detail
+
+        p.main-subtitle O GLOBO reuniu um júri de 47 especialistas brasileiros para eleger os 50 maiores atletas da NBA vistos por eles. Agora é sua vez de escolher o Top 10 ideal.
+        p.main-subtitle
+          | Confira os eleitos pelos especialistas&nbsp;
+          a(href="https://oglobo.globo.com/esportes/os-50-maiores-jogadores-da-nba-parte-5-do-10-ao-1-1-24040856" target="_blank") clicando aqui.
+
+      .header-image.header-image-dir
+        img(src=require("./assets/images/topo-dir.jpg"), alt="Basquete")
+
+    include ./assets/components/bts-compartilhar/bts-compartilhar.pug
+
+    .players-container
+
+  //- include ./assets/components/veja-mais/veja-mais.pug
+  include ./assets/components/modal-warning/modal-warning.pug
+  include ./assets/components/modal/modal.pug
+
+  script.
+    function onSuccessfullSubmit() {
+      document.querySelector('.main-submit-button').disabled = false
+    }

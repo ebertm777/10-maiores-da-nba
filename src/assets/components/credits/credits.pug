@@ -1,0 +1,31 @@
+mixin addCredits(config)
+  section.section-credits
+    .credits-container
+      h2.credits-main-title Créditos
+      each area in config
+        span.role= area.position
+        span.names
+          each name in area.names
+            span.name= name
+
++addCredits([{
+  position: 'Texto e apuração',
+  names: [
+    'Nome aqui'
+  ]
+}, {
+  position: 'Design',
+  names: [
+    'Nome aqui'
+  ]
+}, {
+  position: 'Desenvolvimento',
+  names: [
+    'Nome aqui'
+  ]
+}, {
+  position: 'Colaboração',
+  names: [
+    'Nome aqui'
+  ]
+}])
